@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Thought</title>
+	<script src="https://use.fontawesome.com/8111b05a46.js"></script>
+	<link rel="stylesheet" type="text/css" href="./master.css">
+</head>
+<body>
+ <div class="main">
+  	<div id="text">
+  		<textarea :class="{'input-raw': beTrue, 'input-trigger':beTrigger}" v-on:click="show" v-model="content"  ></textarea>
+  		<button  v-show="ok" class="cancel" v-on:click="cancel" ><i class="fa fa-times" aria-hidden="true"></i></button>
+      <button v-show="ok" class="send" v-on:click="send"  ><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+  	</div> 
+
+    <div id="content">
+  	  <p>{{ contents }}</p>
+    </div>
+</div>
+ <script src="https://unpkg.com/vue"></script>
+ <script src="https://cdn.jsdelivr.net/npm/vue-resource@1.3.5"></script>
+ <script src="./main.js"></script>
+</body>
+</html>
